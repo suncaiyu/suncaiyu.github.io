@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>qpainter之qtransform | Furrain Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="小憩片刻，马上就好">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.ece217d8.css" as="style"><link rel="preload" href="/assets/js/app.24919090.js" as="script"><link rel="preload" href="/assets/js/3.16961c4f.js" as="script"><link rel="preload" href="/assets/js/1.df03b068.js" as="script"><link rel="preload" href="/assets/js/30.2ef1d5a5.js" as="script"><link rel="prefetch" href="/assets/js/10.e8bfcf7f.js"><link rel="prefetch" href="/assets/js/11.e6b1f9d6.js"><link rel="prefetch" href="/assets/js/12.8b8e21c5.js"><link rel="prefetch" href="/assets/js/13.8a893342.js"><link rel="prefetch" href="/assets/js/14.ded12ddf.js"><link rel="prefetch" href="/assets/js/15.3e7a1185.js"><link rel="prefetch" href="/assets/js/16.836e8336.js"><link rel="prefetch" href="/assets/js/17.3697f49f.js"><link rel="prefetch" href="/assets/js/18.9ba1e877.js"><link rel="prefetch" href="/assets/js/19.dbc848af.js"><link rel="prefetch" href="/assets/js/20.8236f8de.js"><link rel="prefetch" href="/assets/js/21.6890b537.js"><link rel="prefetch" href="/assets/js/22.724d3a3f.js"><link rel="prefetch" href="/assets/js/23.2247ffb6.js"><link rel="prefetch" href="/assets/js/24.8b1e724c.js"><link rel="prefetch" href="/assets/js/25.339d91f7.js"><link rel="prefetch" href="/assets/js/26.31508935.js"><link rel="prefetch" href="/assets/js/27.7b31d3a2.js"><link rel="prefetch" href="/assets/js/28.3fd5f07e.js"><link rel="prefetch" href="/assets/js/29.7fd68b32.js"><link rel="prefetch" href="/assets/js/31.d8763919.js"><link rel="prefetch" href="/assets/js/32.68e76cad.js"><link rel="prefetch" href="/assets/js/33.c04f882c.js"><link rel="prefetch" href="/assets/js/34.847c1286.js"><link rel="prefetch" href="/assets/js/35.70c44792.js"><link rel="prefetch" href="/assets/js/36.75f51936.js"><link rel="prefetch" href="/assets/js/37.8b4ffe4b.js"><link rel="prefetch" href="/assets/js/38.9575c66d.js"><link rel="prefetch" href="/assets/js/4.6a6c79c2.js"><link rel="prefetch" href="/assets/js/5.ac58b12a.js"><link rel="prefetch" href="/assets/js/6.32f851bd.js"><link rel="prefetch" href="/assets/js/7.d173fe83.js"><link rel="prefetch" href="/assets/js/8.0e487c8b.js"><link rel="prefetch" href="/assets/js/9.b50c9fc1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ece217d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>Furrain Blog</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>小憩片刻，马上就好</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>furrain</span>
+            
+          <span data-v-25ba6db2>2017 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Furrain Blog" class="logo"> <span class="site-name">Furrain Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/opengl/" class="nav-link"><i class="undefined"></i>
+  opengl
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Qt/" class="nav-link"><i class="undefined"></i>
+  Qt
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光回廊
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Docs
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  vuepress-reco
+</a></li><li class="dropdown-item"><!----> <a href="/docs/mydocs/" class="nav-link"><i class="undefined"></i>
+  mydocs
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-39576ba9> <h3 class="name" data-v-39576ba9>
+    furrain
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>28</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>5</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/opengl/" class="nav-link"><i class="undefined"></i>
+  opengl
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Qt/" class="nav-link"><i class="undefined"></i>
+  Qt
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光回廊
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Docs
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  vuepress-reco
+</a></li><li class="dropdown-item"><!----> <a href="/docs/mydocs/" class="nav-link"><i class="undefined"></i>
+  mydocs
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>qpainter之qtransform</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>furrain</span>
+            
+          <span data-v-25ba6db2>2017 - </span>
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">qpainter之qtransform</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>furrain</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>12/12/2021</span></i> <!----> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>Qt</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="描述"><a href="#描述" class="header-anchor">#</a> 描述</h1> <p>QTransform是Qt中推荐的转换类。转换指定如何平移，缩放，剪切，旋转或投影坐标系，通常在渲染图形时使用。</p> <p>QTransform类支持<a href="https://so.csdn.net/so/search?q=%E7%9F%A9%E9%98%B5&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">矩阵<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>乘法，加法和减法，并且可以流式传输和比较该类的对象。</p> <h2 id="_1-1、渲染图形"><a href="#_1-1、渲染图形" class="header-anchor">#</a> 1.1、渲染图形</h2> <p>渲染图形时，矩阵定义了转换，但是实际的转换由QPainter执行。默认情况下，QPainter在关联设备自己的坐标系上运行。QPaintDevice的标准坐标系的原点位于左上角。x值向右增加； y值向下增加。</p> <p>QPainter具有无需使用QTransform即可平移，缩放，剪切和旋转坐标系的功能。 例如：</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>    QPainter painter(this);
+    painter.setPen(QPen(Qt::blue, 1, Qt::DashLine));
+    painter.drawRect(0, 0, 100, 100);
+ 
+    painter.rotate(45);
+ 
+    painter.setFont(QFont(&quot;Helvetica&quot;, 24));
+    painter.setPen(QPen(Qt::black, 1));
+    painter.drawText(20, 10, &quot;QTransform&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>但是，如果执行多个操作，或者执行沿着X轴Y轴，旋转的类3d操作(QPainter.rotate只支持平面绕远点旋转)就不行了。</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>     QPainter painter(this);
+     painter.setPen(QPen(Qt::blue, 1, Qt::DashLine));
+     painter.drawRect(0, 0, 100, 100);
+ 
+     QTransform transform;
+     transform.translate(50, 50);
+     transform.rotate(45);
+     transform.scale(0.5, 1.0);
+     painter.setTransform(transform);
+ 
+     painter.setFont(QFont(&quot;Helvetica&quot;, 24));
+     painter.setPen(QPen(Qt::black, 1));
+     painter.drawText(20, 10, &quot;QTransform&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>沿着X，Y轴旋转</p> <div class="language-c++ line-numbers-mode"><pre class="language-text"><code>    transform.translate(width() / 2, height() / 2);
+    transform.rotate(mCard.angleX, Qt::XAxis);
+    transform.rotate(mCard.angleY, Qt::YAxis);
+    transform.translate(-width() / 2, -height() / 2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>transform只会记录当前位置的操作，比如，旋转时，默认是从原点开始的，但是如果你想从原点沿着x轴，中心点的y轴，然后按原点位置开始画一个图形，就需要先rotate（xx, Qt::XAxis）,transform(rect().center().x(), rect().center().y()), rotate(xx, Qt::YAxix),transform(-rect().center().x(), -rect().center().y()), paint();</p> <p>类似这个意思。</p></blockquote> <h2 id="_1-2、基本矩阵操作"><a href="#_1-2、基本矩阵操作" class="header-anchor">#</a> 1.2、基本矩阵操作</h2> <p><img src="https://img-blog.csdnimg.cn/img_convert/0321b52a9c9b37efd1d393b7a70e897a.png" alt="img"></p> <p>一个QTransform对象包含一个3 x 3的矩阵。</p> <ul><li>m31（dx）和m32（dy）指定水平和垂直平移。</li> <li>m11和m22元素指定水平和垂直缩放。</li> <li>m21和m12元素指定水平和垂直剪切。</li> <li>m13和m23元素指定水平和垂直投影，m33作为附加投影因子。</li></ul> <p><img src="https://img-blog.csdnimg.cn/20210502150936243.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tlbmZhbjE2NDc=,size_16,color_FFFFFF,t_70" alt="img"></p> <p>QTransform使用以下公式将平面中的一个点转换为另一个点：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> x' = m11*x + m21*y + dx
+ y' = m22*y + m12*x + dy
+ if (is not affine) 
+{
+     w' = m13*x + m23*y + m33
+     x' /= w'
+     y' /= w'
+ }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>点（x，y）是原始点，（x'，y'）是变换后的点。通过对inverted()（倒置）矩阵执行相同的运算，可以将（x'，y'）转换回（x，y）。</p> <h1 id="成员函数"><a href="#成员函数" class="header-anchor">#</a> 成员函数</h1> <ol><li><p>QTransform(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy)
+QTransform(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal 	m31, qreal m32, qreal m33 = 1.0)</p> <blockquote><p>构造</p></blockquote></li> <li><p>QTransform adjoint()</p> <blockquote><p>获取矩阵的伴随矩阵。<a href="https://jingyan.baidu.com/article/ce09321b927f2d2bff858f08.html" target="_blank" rel="noopener noreferrer">伴随矩阵<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></li> <li><p>qreal determinant()</p> <blockquote><p>返回矩阵的行列式。<a href="https://www.zhihu.com/question/36966326" target="_blank" rel="noopener noreferrer">行列式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></li> <li><p>[static] QTransform fromScale(qreal sx, qreal sy)</p> <blockquote><p>创建一个QTransform，矩阵对应于水平sx和垂直sy的缩放比例。 这与scale(sx,sy)相同，但速度稍快。</p></blockquote></li> <li><p>[static] QTransform fromTranslate(qreal dx, qreal dy)</p> <blockquote><p>创建一个QTransform，阵对应于dx沿x轴和平移dy沿y轴平移。 这与translate(dx,dy)相同，但速度稍快。</p></blockquote></li> <li><p>QTransform inverted(bool *invertible = nullptr)</p> <blockquote><p>返回此矩阵的转置矩阵。如果矩阵是奇异的（不可逆），则返回的矩阵是恒等矩阵。 如果参数不为空，则如果矩阵是Invertible，则将其值设置为true，否则将其设置为false。</p></blockquote></li> <li><p>bool isAffine()</p> <blockquote><p>矩阵是否是仿射变换矩阵。<a href="https://www.zhihu.com/question/20666664/answer/157400568" target="_blank" rel="noopener noreferrer">仿射变换<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></li> <li><p>bool isIdentity()</p> <blockquote><p>矩阵是否是单位矩阵。<a href="https://baike.baidu.com/item/%E5%8D%95%E4%BD%8D%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener noreferrer">单位矩阵<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote></li> <li><p>bool isInvertible()</p> <blockquote><p>矩阵是否可逆。</p></blockquote></li> <li><p>bool isRotating()</p> <blockquote><p>矩阵是否表示某种旋转变换。180度和/或360度的旋转变换被视为缩放变换。</p></blockquote></li> <li><p>bool isScaling()</p> <blockquote><p>矩阵是否表示比例转换。</p></blockquote></li> <li><p>bool isTranslating()</p> <blockquote><p>矩阵是否平移矩阵</p></blockquote></li> <li><div class="language-QPoint map(const QPoint &amp;p) line-numbers-mode"><pre class="language-text"><code>       QPointF map(const QPointF &amp;p) 
+    
+       QLine map(const QLine &amp;l) 
+    
+       QLineF map(const QLineF &amp;l) 
+    
+       QPolygonF map(const QPolygonF &amp;a) 
+    
+       QPolygon map(const QPolygon &amp;a) 
+    
+       QRegion map(const QRegion &amp;r) 
+    
+       QPainterPath map(const QPainterPath &amp;p) 
+    
+       void map(int x, int y, int *tx, int *ty) 
+    
+       void map(qreal x, qreal y, qreal *tx, qreal *ty) 
+    
+       QRectF mapRect(const QRectF &amp;rectangle) 
+    
+       QRect mapRect(const QRect &amp;rectangle) 
+    
+       QPolygon mapToPolygon(const QRect &amp;rectangle) 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><blockquote><p>把一个图形映射到矩阵坐标。</p> <p>例，绘制矩形和圆心在（200,200）的圆：</p> <div class="language- extra-class"><pre><code> QPainter painter(this);
+ painter.setPen(QPen(Qt::blue, 1, Qt::DashLine));
+ painter.drawRect(0, 0, 100, 100);
+ painter.setBrush(Qt::red);
+ painter.drawEllipse(QPoint(200,200),10,10);
+
+
+ QTransform transform;
+ transform.translate(50, 50);
+ transform.scale(0.5, 0.5);
+ 
+ painter.setTransform(transform);
+ painter.setPen(QPen(Qt::cyan, 1, Qt::DashDotLine));
+ painter.drawRect(0, 0, 100, 100);
+ auto point = transform.map(QPoint(200,200));
+ qDebug()&lt;&lt;point;
+ painter.drawEllipse(point,10,10);
+</code></pre></div><p>把点（200,200）做映射后绘制同样的形状：</p></blockquote> <p><img src="https://img-blog.csdnimg.cn/20210502163608992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tlbmZhbjE2NDc=,size_16,color_FFFFFF,t_70" alt="img"><img src="https://img-blog.csdnimg.cn/20210502163905644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tlbmZhbjE2NDc=,size_16,color_FFFFFF,t_70" alt="img"></p></li> <li><p>[static] bool quadToQuad(const QPolygonF &amp;one, const QPolygonF &amp;two, QTransform &amp;trans)</p> <blockquote><p>多边形能否one映射到另一个多边形two。</p></blockquote></li> <li><p>[static] bool quadToSquare(const QPolygonF &amp;quad, QTransform &amp;trans)</p> <blockquote><p>多边形quad能否在trans中映射为单位正方形。</p></blockquote></li> <li><p>void reset()</p> <blockquote><p>将矩阵重置为单位矩阵，即所有元素均设置为零，m11、m22、m33设置为1，其他元素设为0。</p></blockquote></li> <li><p>QTransform &amp;rotate(qreal angle, Qt::Axis axis = Qt::ZAxis)</p> <p>​    QTransform &amp;rotateRadians(qreal angle, Qt::Axis axis = Qt::ZAxis)</p> <blockquote><p>围绕指定的轴逆时针旋转坐标系，并返回对矩阵的引用。如果将QTransform应用于QWidget坐标中定义的点，则旋转方向将为顺时针方向，因为y轴指向下方</p></blockquote></li> <li><p>QTransform &amp;scale(qreal sx, qreal sy)</p> <blockquote><p>按sx水平和sy垂直缩放坐标系，并返回对矩阵的引用。</p></blockquote></li> <li><p>void setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33)</p> <blockquote><p>设置矩阵。</p></blockquote></li> <li><p>QTransform &amp;shear(qreal sh, qreal sv)</p> <blockquote><p>水平剪切水平轴，垂直剪切水平轴sv，并返回对矩阵的引用</p> <p>auto rectPoint = event-&gt;rect().center();
+QTransform transform;
+transform.translate(rectPoint.x(),rectPoint.y());</p> <div class="language- extra-class"><pre><code> painter.setTransform(transform);
+ painter.setPen(QPen(Qt::red, 3, Qt::DashDotLine));
+ painter.drawRect(0, 0, 100, 100);
+ 
+ transform.shear(0.5,0.5);
+ painter.setTransform(transform);
+ painter.setPen(QPen(Qt::cyan, 3, Qt::DashDotLine));
+ painter.drawRect(0, 0, 100, 100);
+</code></pre></div></blockquote> <p><img src="https://img-blog.csdnimg.cn/20210502183950787.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tlbmZhbjE2NDc=,size_16,color_FFFFFF,t_70" alt="img"></p></li> <li><p>[static] bool squareToQuad(const QPolygonF &amp;quad, QTransform &amp;trans)</p> <blockquote><p>变换矩阵trans是否可以将单位正方形映射到多边形quad。</p></blockquote></li> <li><p>QTransform &amp;translate(qreal dx, qreal dy)</p> <blockquote><p>沿x轴移动坐标系dx并沿y轴移动dy，并返回对矩阵的引用</p></blockquote></li> <li><p>QTransform transposed()</p> <blockquote><p>返回此矩阵的转置。</p></blockquote></li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.24919090.js" defer></script><script src="/assets/js/3.16961c4f.js" defer></script><script src="/assets/js/1.df03b068.js" defer></script><script src="/assets/js/30.2ef1d5a5.js" defer></script>
+  </body>
+</html>
